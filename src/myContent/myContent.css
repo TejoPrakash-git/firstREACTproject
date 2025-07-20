@@ -1,0 +1,22 @@
+.myContent {
+    background-color: #408198;
+    padding: 100px;
+    color: #fff;
+    min-height: 100vh;
+    font-size: 25px;
+}
+
+.navItem{
+    text-align: left;
+    padding: 5px;
+    font-size: 25px;   
+
+}
+
+.navBar{
+    background-color: #ccd3d6;
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px solid rgb(0, 0, 0);
+    width: auto;
+}

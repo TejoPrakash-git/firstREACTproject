@@ -1,0 +1,16 @@
+.rform{
+       border: 5px solid rgb(0, 0, 0);
+       width: 500px;
+       height: 600px;
+       margin: auto;
+       margin-block: 100px;
+       background-color: #739fbbff;
+}
+
+.rform-group label{
+    align-items: flex-start;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}   
+
