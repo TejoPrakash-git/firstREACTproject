@@ -20,7 +20,7 @@ function Registerform(){
     };  
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:');
+        console.log('Form submitted', formData);
         navigate('/login');
     }
     return(
@@ -29,13 +29,13 @@ function Registerform(){
                 <h1>Register Form</h1> 
                 <div className='form-group'>
                     <label>Username : </label>
-                    <input type="text" name="Username" placeholder='Enter Username'></input>
+                    <input type="text" name="Username" placeholder='Enter Username' ></input>
                     <label>Email : </label>
                     <input type="text" name="Email" placeholder='Enter your Email'></input>
                     <label>Password : </label>
-                    <input type="text" name="Password" placeholder='Enter your Password'></input>
+                    <input type="text" name="Password" placeholder='Enter your Password' ></input>
                     <label>Confirm Password : </label>
-                    <input type="text" name="ConfirmPassword" placeholder='Confirm your Password'></input><br></br>
+                    <input type="text" name="ConfirmPassword" placeholder='Confirm your Password' ></input><br></br>
                     <button className='btn'>Register</button>
                     <p>already have a account ? </p>
                     <Link className='link' to="/login.jsx">Login</Link>

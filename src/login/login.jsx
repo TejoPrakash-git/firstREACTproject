@@ -18,7 +18,7 @@ function Loginform(){
     };  
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:');
+        console.log('Form submitted:', formData);
         navigate('/dash');
     }
     return(
@@ -27,12 +27,12 @@ function Loginform(){
                 <h1>Login Form</h1> 
                 <div className='rform-group'>
                     <label>Username : </label>
-                    <input type="text" name="Username" placeholder='Enter Username'></input>
+                    <input type="text" name="Username" placeholder='Enter Username' ></input>
                     <label>Email : </label>
-                    <input type="text" name="Email" placeholder='Enter your Email'></input>
+                    <input type="text" name="Email" placeholder='Enter your Email' ></input>
                     <label>Password : </label>
-                    <input type="text" name="Password" placeholder='Enter your Password'></input><br></br>
-                    <button className='button'>Login</button>
+                    <input type="text" name="Password" placeholder='Enter your Password' ></input><br></br>
+                    <button className='btn'>Login</button>
                     <p>Doesn't have an account ? </p>
                     <Link className='link' to="/form">register</Link>
                 </div>
