@@ -1,24 +1,13 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+const userRouter = require('./routes/user.js');
 
-// Middleware to parse JSON body
+mongoose.connect('mongodb://localhost/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true });
+
 app.use(express.json());
+app.use('/api', userRouter);
 
-app.get('/api/hello', (req, res) => {
-  res.json({ message: 'hello this is get api from express' });
+app.listen(5000, () => {
+  console.log('Server listening on port 5000');
 });
-
-app.post('/api/hello', (req, res) => {
-  const data = req.body;
-  res.json({ message: 'posted data', data });
-});
-
-app.get('/api1/hi',(req,res)=>{
-    res.json({message:"this second api"})
-})
-
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on ${PORT}`);
-});
-
