@@ -1,16 +1,118 @@
-.form{
-       border: 5px solid rgb(0, 0, 0);
-       width: 500px;
-       height: 600px;
-       margin: auto;
-       margin-block: 100px;
-       background-color: #739fbbff;
+/* General body style to make the form stand out */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #1a1a2e; /* Dark background to enhance the glow */
+    color: #333;
 }
 
-.form-group label{
-    align-items: flex-start;
-    padding: 10px;
+
+.form {
+    border: 5px solid rgb(0, 0, 0);
+    width: 500px;
+    /* Using auto height for flexibility with more fields */
+    height: auto;
+    margin: 100px auto; /* Combines margin-block and auto */
+    background-color: #739fbb;
+    box-sizing: border-box; /* Ensures padding is included in the total width/height */
+
+    /* --- Additions for Glow and Layout --- */
+    border-radius: 15px; /* Softens the corners */
+    padding: 40px; /* Adds space for the content inside */
+    box-shadow: 0 0 20px 5px rgba(115, 225, 255, 0.7); /* The Glow Effect */
+    text-align: center; /* Centers the h1 and other text elements */
+}
+
+/* Style for the "Register Form" title */
+.form h1 {
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for the group containing labels and inputs */
+.form-group {
     display: flex;
     flex-direction: column;
-}   
+    gap: 8px; /* Adds a small space between each label and its input */
+}
 
+.form-group label {
+    /* Your original styles, slightly adjusted */
+    align-items: flex-start;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    /* --- Additions for better text styling --- */
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 15px; /* Adds space below each input field */
+}
+
+/* --- Added Button and Link Styles --- */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff; /* Blue for registration */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space above the button */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.form-group p {
+    color: #e0e0e0;
+    margin-top: 20px; /* Space above the paragraph */
+    margin-bottom: 5px;
+}
+
+.link {
+    color: #d4eaff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.rform-group input,
+.form-group input {
+    padding-left: 40px; /* Make space for the icon */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Position: 10px from left, vertically centered */
+    background-size: 20px; /* Set a consistent size for all icons */
+}
+
+/* Specific icon for each input field */
+.input-username {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>');
+}
+
+.input-email {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>');
+}
+
+.input-password {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>');
+}

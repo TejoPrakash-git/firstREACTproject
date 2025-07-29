@@ -27,14 +27,14 @@ function Loginform(){
                 <h1>Login Form</h1> 
                 <div className='rform-group'>
                     <label>Username : </label>
-                    <input type="text" name="Username" placeholder='Enter Username' ></input>
+                    <input type="text" name="Username" placeholder='Enter Username' className="input-username"></input>
                     <label>Email : </label>
-                    <input type="text" name="Email" placeholder='Enter your Email' ></input>
+                    <input type="text" name="Email" placeholder='Enter your Email' className="input-email"></input>
                     <label>Password : </label>
-                    <input type="text" name="Password" placeholder='Enter your Password' ></input><br></br>
+                    <input type="text" name="Password" placeholder='Enter your Password' className="input-password"></input><br></br>
                     <button className='btn'>Login</button>
-                    <p>Doesn't have an account ? </p>
-                    <Link className='link' to="/form">register</Link>
+                    <p>Doesn't have an account ?  <Link className='link' to="/form">register</Link></p>
+                    
                 </div>
             </form>
         </div>
