@@ -1,22 +1,62 @@
+/* Main content page container */
 .myContent {
     background-color: #408198;
-    padding: 100px;
-    color: #fff;
+    color: #ffffff;
     min-height: 100vh;
-    font-size: 25px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    /* --- Updated Styles --- */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the navbar and title */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navItem{
-    text-align: left;
-    padding: 5px;
-    font-size: 25px;   
-
+.myContent h1 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.navBar{
-    background-color: #ccd3d6;
-    padding: 20px;
-    border-radius: 20px;
-    border: 5px solid rgb(0, 0, 0);
-    width: auto;
+/* The navigation bar container */
+.navBar {
+    /* --- Overriding old styles --- */
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent dark background */
+    border: none; /* Removed the harsh border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Modern shadow for depth */
+
+    /* --- Updated Styles for Layout --- */
+    display: flex;
+    justify-content: center; /* Center the nav items within the bar */
+    gap: 10px; /* Adds space between navigation items */
+    padding: 15px;
+    border-radius: 50px; /* Creates a modern "pill" shape */
+    width: 100%;
+    max-width: 800px; /* Prevents the bar from being too wide on large screens */
+}
+
+/* Styling the NavLink (<a> tags) directly */
+.navItem a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 30px; /* Pill shape for each link */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+}
+
+/* Hover effect for all navigation links */
+.navItem a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Style for the ACTIVE link */
+/* NavLink automatically adds the 'active' class to the current page's link */
+.navItem a.active {
+    background-color: #ffffff;
+    color: #408198; /* Use the main background color for the text */
+    font-weight: bold;
 }

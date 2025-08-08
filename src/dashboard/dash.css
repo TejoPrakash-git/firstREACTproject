@@ -1,23 +1,60 @@
+
 .dashboard {
     background-color: #408198;
-    padding: 100px;
-    color: #fff;
+    color: #ffffff;
     min-height: 100vh;
-    font-size: 25px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navItem{
-    text-align: left;
-    padding: 5px;
-    font-size: 25px;   
-
+.dashboard h1 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.Navbar{
-    background-color: #fefefe;
-    padding: 20px;
-    border-radius: 20px;
-    border: 5px solid rgb(0, 0, 0);
-    width: auto;
+
+.Navbar {
+    
+    background-color: rgba(0, 0, 0, 0.2); 
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    padding: 15px;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 800px; 
 }
 
+
+.navItem a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 30px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+}
+
+
+.navItem a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.navItem a.active {
+    background-color: #ffffff;
+    color: #408198; 
+    font-weight: bold;
+}
